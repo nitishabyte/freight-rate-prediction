@@ -1,0 +1,75 @@
+{
+  "data_quality": {
+    "train": {
+      "equipment_relabelled": 0,
+      "bad_dates": 0,
+      "weight_missing": 300,
+      "weight_invalid": 292,
+      "distance_invalid": 0,
+      "distance_vs_greatcircle_suspicious": 12,
+      "duplicate_load_ids": 0,
+      "duplicate_rows": 0,
+      "dropped_bad_target_or_key_fields": 0,
+      "dropped_rate_outliers": 677,
+      "train_rows_in": 48000,
+      "train_rows_kept": 47323
+    },
+    "validation": {
+      "equipment_relabelled": 0,
+      "bad_dates": 0,
+      "weight_missing": 165,
+      "weight_invalid": 145,
+      "distance_invalid": 0,
+      "distance_vs_greatcircle_suspicious": 11
+    },
+    "december": {
+      "equipment_relabelled": 0,
+      "bad_dates": 0,
+      "weight_missing": 0,
+      "weight_invalid": 0,
+      "distance_invalid": 0
+    }
+  },
+  "time_cv_summary": [
+    {
+      "model": "HGB model",
+      "MAE": 69.22,
+      "RMSE": 103.063,
+      "MAPE_%": 2.992,
+      "R2": 0.994
+    },
+    {
+      "model": "lane median rpm",
+      "MAE": 88.23,
+      "RMSE": 135.16,
+      "MAPE_%": 3.751,
+      "R2": 0.99
+    },
+    {
+      "model": "quote_signal x distance",
+      "MAE": 216.668,
+      "RMSE": 300.524,
+      "MAPE_%": 10.689,
+      "R2": 0.93
+    }
+  ],
+  "random_kfold": {
+    "MAE": 25.166704188803223,
+    "RMSE": 38.27572517336605,
+    "MAPE_%": 1.065348385389451,
+    "R2": 0.9992004953446318,
+    "n": 47323
+  },
+  "params": {
+    "learning_rate": "0.05",
+    "max_iter": "1500",
+    "max_leaf_nodes": "63",
+    "min_samples_leaf": "40",
+    "l2_regularization": "1.0",
+    "early_stopping": "True",
+    "validation_fraction": "0.1",
+    "n_iter_no_change": "50",
+    "categorical_features": "from_dtype",
+    "random_state": "42"
+  }
+}
