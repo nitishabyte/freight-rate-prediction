@@ -59,7 +59,10 @@ def clean(df: pd.DataFrame, is_train: bool, report: dict | None = None) -> pd.Da
 
     # Impossible physical values -> missing (model handles NaN natively)
     if "weight" in df:
-        bad_w = (df["weight"] <= 0) | (df["weight"] > 80_000)
+        neg = df["weight"] < 0
+        rep["weight_sign_flipped"] = int(neg.sum())   # e.g. -47500 -> 47500 (sign typo)
+        df.loc[neg, "weight"] = df.loc[neg, "weight"].abs()
+        bad_w = (df["weight"] == 0) | (df["weight"] > 80_000)
         rep["weight_missing"] = int(df["weight"].isna().sum())
         rep["weight_invalid"] = int(bad_w.sum())
         df.loc[bad_w, "weight"] = np.nan

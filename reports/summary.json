@@ -3,8 +3,9 @@
     "train": {
       "equipment_relabelled": 0,
       "bad_dates": 0,
+      "weight_sign_flipped": 292,
       "weight_missing": 300,
-      "weight_invalid": 292,
+      "weight_invalid": 0,
       "distance_invalid": 0,
       "distance_vs_greatcircle_suspicious": 12,
       "duplicate_load_ids": 0,
@@ -17,14 +18,16 @@
     "validation": {
       "equipment_relabelled": 0,
       "bad_dates": 0,
+      "weight_sign_flipped": 145,
       "weight_missing": 165,
-      "weight_invalid": 145,
+      "weight_invalid": 0,
       "distance_invalid": 0,
       "distance_vs_greatcircle_suspicious": 11
     },
     "december": {
       "equipment_relabelled": 0,
       "bad_dates": 0,
+      "weight_sign_flipped": 0,
       "weight_missing": 0,
       "weight_invalid": 0,
       "distance_invalid": 0
@@ -33,9 +36,9 @@
   "time_cv_summary": [
     {
       "model": "HGB model",
-      "MAE": 69.22,
-      "RMSE": 103.063,
-      "MAPE_%": 2.992,
+      "MAE": 69.81,
+      "RMSE": 104.337,
+      "MAPE_%": 3.013,
       "R2": 0.994
     },
     {
@@ -54,10 +57,10 @@
     }
   ],
   "random_kfold": {
-    "MAE": 25.166704188803223,
-    "RMSE": 38.27572517336605,
-    "MAPE_%": 1.065348385389451,
-    "R2": 0.9992004953446318,
+    "MAE": 25.026032122440274,
+    "RMSE": 38.03278301372693,
+    "MAPE_%": 1.059965747024141,
+    "R2": 0.999210612303698,
     "n": 47323
   },
   "params": {
